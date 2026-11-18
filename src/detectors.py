@@ -32,9 +32,9 @@ def noise_level(x):
 
 
 def threshold_baseline(x, k=4.0, reference=28, run=4):
-    """Базовый метод. Берём первые `reference` точек как эталон (медиана и разброс).
+    """Базовый метод. Берем первые `reference` точек как эталон (медиана и разброс).
     Если `run` точек подряд отклоняются от эталона больше чем на k разбросов,
-    считаем, что начался новый режим, и берём новый эталон с этого места."""
+    считаем, что начался новый режим, и берем новый эталон с этого места."""
     x = np.asarray(x, dtype=float)
     changes = []
     start = 0
@@ -73,7 +73,7 @@ def rolling_window(x, window=20, threshold=4.0):
     right = (cumsum[t + window] - cumsum[t]) / window     # среднее окна справа
     scores[t] = np.abs(right - left) / sigma
 
-    # Берём локальные максимумы выше порога, не ближе window точек друг к другу
+    # Берем локальные максимумы выше порога, не ближе window точек друг к другу
     changes = []
     candidates = np.argsort(scores)[::-1]
     for t in candidates:

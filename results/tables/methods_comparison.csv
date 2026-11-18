@@ -1,7 +1,7 @@
 method,split,params,precision,recall,f1,tp,fp,fn,mean_delay_h,time_ms,memory_kb
 threshold_baseline,train,"{""k"": 3.0}",0.375,0.547,0.445,116,193,96,5.7,0.142,25.1
 threshold_baseline,test,"{""k"": 3.0}",0.914,0.788,0.847,160,15,43,6.1,0.077,25.1
-rolling_window,train,"{""window"": 28, ""threshold"": 3.0}",0.355,0.84,0.499,178,323,34,6.7,0.084,46.7
-rolling_window,test,"{""window"": 28, ""threshold"": 3.0}",0.859,0.837,0.848,170,28,33,3.7,0.049,46.7
-binary_segmentation,train,"{""penalty"": 64.0}",0.422,0.769,0.545,163,223,49,4.3,0.083,68.7
-binary_segmentation,test,"{""penalty"": 64.0}",0.886,0.611,0.723,124,16,79,3.0,0.042,68.7
+rolling_window,train,"{""window"": 28, ""threshold"": 3.0}",0.355,0.84,0.499,178,323,34,6.7,0.081,46.7
+rolling_window,test,"{""window"": 28, ""threshold"": 3.0}",0.859,0.837,0.848,170,28,33,3.7,0.033,46.7
+binary_segmentation,train,"{""penalty"": 64.0}",0.422,0.769,0.545,163,223,49,4.3,0.079,68.6
+binary_segmentation,test,"{""penalty"": 64.0}",0.886,0.611,0.723,124,16,79,3.0,0.042,68.6

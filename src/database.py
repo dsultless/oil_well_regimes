@@ -1,5 +1,5 @@
 """База данных SQLite: нормализованная схема (3НФ), загрузка данных,
-аналитические SQL-запросы и сравнение одного расчёта в SQL и в Pandas."""
+аналитические SQL-запросы и сравнение одного расчета в SQL и в Pandas."""
 
 import sqlite3
 import time
@@ -77,7 +77,7 @@ FLAG_RULES = {
 }
 
 TYPE_DESCRIPTIONS = {
-    config.FOUNTAIN: "Фонтанная скважина: нефть поднимается за счёт пластового давления",
+    config.FOUNTAIN: "Фонтанная скважина: нефть поднимается за счет пластового давления",
     config.PUMP: "Скважина со штанговым глубинным насосом (станок-качалка)",
 }
 
@@ -91,7 +91,7 @@ def connect():
 
 
 def build_database(train_df, test_df):
-    """Создаёт базу с нуля и загружает данные в нормализованные таблицы."""
+    """Создает базу с нуля и загружает данные в нормализованные таблицы."""
     if config.DB_PATH.exists():
         config.DB_PATH.unlink()
     conn = connect()
@@ -154,7 +154,7 @@ def build_database(train_df, test_df):
 
 # Аналитические запросы: название -> текст SQL
 QUERIES = {
-    "Q1. Объём данных по типам скважин (JOIN + GROUP BY)": """
+    "Q1. Объем данных по типам скважин (JOIN + GROUP BY)": """
         SELECT wt.type_name, w.well_id,
                COUNT(*)              AS rows_count,
                ROUND(AVG(m.n_obs), 2) AS avg_raw_records_per_hour,
@@ -358,7 +358,7 @@ def save_experiments(rows):
 
 
 def pandas_vs_sql(df, repeats=5):
-    """Один и тот же расчёт (среднее по скважине, параметру и месяцу)
+    """Один и тот же расчет (среднее по скважине, параметру и месяцу)
     делаем в SQL и в Pandas, сравниваем время и проверяем, что ответы совпадают."""
     sql = """
         SELECT m.well_id, p.name AS parameter, substr(m.ts, 1, 7) AS month,
@@ -394,7 +394,7 @@ def pandas_vs_sql(df, repeats=5):
     left = outputs["sql"].sort_values(["well_id", "parameter", "month"]).reset_index(drop=True)
     right = outputs["pandas"]
     same_keys = left[["well_id", "parameter", "month"]].equals(right[["well_id", "parameter", "month"]])
-    # float32 в Pandas даёт небольшую погрешность, поэтому сравниваем с допуском
+    # float32 в Pandas дает небольшую погрешность, поэтому сравниваем с допуском
     same_values = bool(np.allclose(left["avg_value"], right["avg_value"], rtol=1e-4))
     return {
         "groups": int(len(left)),

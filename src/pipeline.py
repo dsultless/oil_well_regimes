@@ -51,7 +51,7 @@ def step_quality():
 
 
 def step_database():
-    """Шаг 3. Создать базу SQLite и сравнить один расчёт в SQL и Pandas."""
+    """Шаг 3. Создать базу SQLite и сравнить один расчет в SQL и Pandas."""
     train = data_loader.load_dataset("train")
     test = data_loader.load_dataset("test")
     counts = database.build_database(train, test)

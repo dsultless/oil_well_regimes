@@ -1,5 +1,5 @@
 split,place,method,f1,precision,recall,time_ms
-test,1,rolling_window,0.848,0.859,0.837,0.05
+test,1,rolling_window,0.848,0.859,0.837,0.03
 test,2,threshold_baseline,0.847,0.914,0.788,0.08
 test,3,binary_segmentation,0.723,0.886,0.611,0.04
 train,1,binary_segmentation,0.545,0.422,0.769,0.08

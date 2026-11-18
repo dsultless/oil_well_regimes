@@ -8,8 +8,8 @@
     "measurement_flags": 7118
   },
   "groups": 384,
-  "sql_seconds": 0.1638,
-  "pandas_seconds": 0.3566,
+  "sql_seconds": 0.1615,
+  "pandas_seconds": 0.3518,
   "same_groups": true,
   "same_values": true,
   "max_abs_difference": 1.8189894035458565e-12

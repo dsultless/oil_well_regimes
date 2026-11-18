@@ -26,7 +26,7 @@ PARAMS_BY_TYPE = {
     PUMP: ["SPM", "pump_fillage", "max_rod_weight", "min_rod_weight", "dynamometer_area"],
 }
 
-# Параметры, по которым ищем смену режима (dynamometer_area берём отдельно, в логарифме)
+# Параметры, по которым ищем смену режима (dynamometer_area берем отдельно, в логарифме)
 DETECTION_PARAMS = {
     FOUNTAIN: ["tubing_pressure", "casing_pressure", "line_pressure"],
     PUMP: ["SPM", "pump_fillage", "max_rod_weight", "min_rod_weight"],
@@ -47,6 +47,6 @@ SEED = 42
 
 
 def ensure_dirs():
-    """Создаёт все рабочие папки, если их ещё нет."""
+    """Создает все рабочие папки, если их еще нет."""
     for folder in [DATA_RAW, DATA_PROCESSED, DB_PATH.parent, FIGURES, TABLES]:
         folder.mkdir(parents=True, exist_ok=True)

@@ -1,4 +1,4 @@
-"""Графики: статичные PNG (matplotlib, seaborn) для отчёта и презентации
+"""Графики: статичные PNG (matplotlib, seaborn) для отчета и презентации
 и интерактивный HTML (plotly)."""
 
 import matplotlib

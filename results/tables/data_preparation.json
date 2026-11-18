@@ -12,9 +12,9 @@
   ],
   "memory_before_mb": 24.61,
   "memory_after_mb": 5.42,
-  "read_full_seconds": 0.364,
+  "read_full_seconds": 0.36,
   "read_full_peak_mb": 37.91,
-  "read_chunks_seconds": 0.346,
+  "read_chunks_seconds": 0.342,
   "read_chunks_peak_mb": 21.58,
   "dtypes_before": {
     "well_id": "str",
@@ -39,6 +39,6 @@
   "memory_saving_percent": 78.0,
   "csv_size_mb": 18.93,
   "parquet_size_mb": 1.81,
-  "csv_read_seconds": 0.103,
-  "parquet_read_seconds": 0.002
+  "csv_read_seconds": 0.101,
+  "parquet_read_seconds": 0.003
 }

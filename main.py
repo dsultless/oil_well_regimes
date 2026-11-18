@@ -38,7 +38,7 @@ ACTIONS = {
 
 
 def ask_choice(prompt, options):
-    """Спрашивает пользователя, пока он не введёт один из вариантов."""
+    """Спрашивает пользователя, пока он не введет один из вариантов."""
     while True:
         answer = input(prompt).strip()
         if answer in options:
@@ -47,12 +47,12 @@ def ask_choice(prompt, options):
 
 
 def load_best_params():
-    """Читает подобранные параметры методов; если их нет, берёт первые из сетки."""
+    """Читает подобранные параметры методов; если их нет, берет первые из сетки."""
     try:
         with open(config.TABLES / "best_params.json", encoding="utf-8") as f:
             return json.load(f)["best_params"]
     except FileNotFoundError:
-        print("Параметры ещё не подобраны (пункт 6), использую значения по умолчанию.")
+        print("Параметры еще не подобраны (пункт 6), использую значения по умолчанию.")
         return {method: grid[0] for method, grid in detectors.PARAM_GRID.items()}
 
 
@@ -97,10 +97,10 @@ def analyze_one_well():
         try:
             history = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
-            print("Файл истории повреждён, начинаю новую историю.")
+            print("Файл истории поврежден, начинаю новую историю.")
     history.append(record)
     path.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Результат сохранён в {path}")
+    print(f"Результат сохранен в {path}")
 
 
 def main():

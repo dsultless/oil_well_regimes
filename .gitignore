@@ -1,4 +1,4 @@
-# Данные скачиваются программой (python main.py --all), в репозиторий не кладём
+# Данные скачиваются программой (python main.py --all), в репозиторий не кладем
 data/raw/*.csv
 data/processed/
 database/*.db

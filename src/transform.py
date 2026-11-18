@@ -148,7 +148,7 @@ def mark_stopped(df):
 def make_series(df, well, parameter, rule=config.RESAMPLE_RULE, start=None, end=None,
                 value_col="value_clean"):
     """Ряд одного параметра одной скважины в часы работы: медиана за каждые 6 часов,
-    пустые интервалы удаляются. dynamometer_area берём в log10, чтобы видеть сдвиг масштаба."""
+    пустые интервалы удаляются. dynamometer_area берем в log10, чтобы видеть сдвиг масштаба."""
     part = df[(df["well_id"] == well) & (df["parameter"] == parameter)]
     if "stopped" in part.columns:
         part = part[~part["stopped"]]

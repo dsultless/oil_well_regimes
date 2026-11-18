@@ -12,7 +12,7 @@ from src import config
 
 
 def download_data(force=False):
-    """Скачивает CSV-файлы датасета, если их ещё нет в data/raw."""
+    """Скачивает CSV-файлы датасета, если их еще нет в data/raw."""
     config.ensure_dirs()
     downloaded = []
     for name in config.RAW_FILES:
@@ -24,7 +24,7 @@ def download_data(force=False):
         try:
             urllib.request.urlretrieve(url, target)
         except Exception:
-            # На некоторых Mac у Python нет сертификатов, тогда берём их из certifi
+            # На некоторых Mac у Python нет сертификатов, тогда берем их из certifi
             import ssl
             import certifi
             context = ssl.create_default_context(cafile=certifi.where())
@@ -46,7 +46,7 @@ def optimize_dtypes(df):
 
 
 def memory_mb(df):
-    """Сколько мегабайт занимает таблица в памяти (с учётом текста)."""
+    """Сколько мегабайт занимает таблица в памяти (с учетом текста)."""
     return df.memory_usage(deep=True).sum() / 1024 ** 2
 
 
