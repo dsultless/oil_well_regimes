@@ -24,6 +24,8 @@
 Нужен Python 3.11 или новее (проверено на 3.14.5).
 
 ```bash
+git clone https://github.com/dsultless/oil_well_regimes.git
+cd oil_well_regimes
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
