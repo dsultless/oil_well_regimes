@@ -1,0 +1,7 @@
+method,type_name,changes,wells_with_changes,changes_per_series
+binary_segmentation,fountain,81,3,10.13
+binary_segmentation,sucker_rod_pump,289,7,11.56
+rolling_window,fountain,88,3,11.0
+rolling_window,sucker_rod_pump,309,7,11.04
+threshold_baseline,fountain,29,3,3.63
+threshold_baseline,sucker_rod_pump,116,7,4.3

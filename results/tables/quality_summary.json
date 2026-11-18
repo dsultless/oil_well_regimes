@@ -1,0 +1,27 @@
+{
+  "rows": 258387,
+  "wells": 10,
+  "period": [
+    "2026-01-01 00:00:00",
+    "2026-09-30 23:00:00"
+  ],
+  "expected_hours": 6552,
+  "flagged_rows": 7041,
+  "flagged_percent": 2.72,
+  "duplicates": 0,
+  "gaps_over_24h": 6,
+  "known_issues": {
+    "area_median_ratio_after_before": {
+      "NK-68": 14.8,
+      "NK-7": 15.8,
+      "NK-77": 16.6,
+      "NK-82": 15.9,
+      "NK-86": 20.9,
+      "NK-91": 21.6,
+      "NK-93": 14.0
+    },
+    "nk7_spm_median_before_june": 4.16,
+    "nk7_spm_median_after_june": 1.36,
+    "nk7_spm_zero_percent_after_june": 3.3
+  }
+}

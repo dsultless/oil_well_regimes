@@ -1,0 +1,8 @@
+well_id,flag_name,flagged_rows
+NK-7,weight_overflow,3946
+NK-7,area_negative,2781
+NK-86,weight_overflow,121
+NK-86,area_negative,92
+NK-86,area_extreme,88
+NK-82,area_negative,39
+NK-82,weight_overflow,30

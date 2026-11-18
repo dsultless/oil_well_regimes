@@ -1,0 +1,16 @@
+{
+  "tables": {
+    "well_types": 2,
+    "wells": 10,
+    "parameters": 8,
+    "measurements": 258387,
+    "flags": 4,
+    "measurement_flags": 7118
+  },
+  "groups": 384,
+  "sql_seconds": 0.1584,
+  "pandas_seconds": 0.3581,
+  "same_groups": true,
+  "same_values": true,
+  "max_abs_difference": 1.8189894035458565e-12
+}

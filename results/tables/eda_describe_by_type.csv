@@ -1,0 +1,9 @@
+well_type,parameter,count,mean,std,min,25%,50%,75%,max,iqr_outliers_percent
+fountain,casing_pressure,11593.0,17.411,7.984,0.0,8.95,21.1,23.3,36.925,0.0
+fountain,line_pressure,13927.0,4.125,2.131,0.0,2.617,4.467,5.375,28.1,1.52
+fountain,tubing_pressure,19036.0,10.008,5.597,0.0,7.225,9.512,10.9,36.3,23.28
+sucker_rod_pump,SPM,43934.0,5.101,1.816,0.0,4.578,5.367,6.072,8.19,11.19
+sucker_rod_pump,dynamometer_area,37712.0,1.033,0.349,0.0,0.838,1.0,1.171,8.096,4.98
+sucker_rod_pump,max_rod_weight,41233.0,9791.088,2238.074,0.0,9356.0,9951.5,10380.25,29185.0,7.93
+sucker_rod_pump,min_rod_weight,42589.0,7658.929,2703.945,0.0,7006.0,7541.6,8130.6,29713.333,6.95
+sucker_rod_pump,pump_fillage,40652.0,45.887,29.95,0.0,15.286,47.075,72.034,100.0,0.0

@@ -1,0 +1,28 @@
+well_id,parameter,window,method,detected,detected_at,changes_in_series,source
+NK-7,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-05 12:00:00,3,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-7,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-05 12:00:00,2,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-7,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-05 12:00:00,1,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-68,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-05 12:00:00,3,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-68,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-05 12:00:00,1,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-68,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-05 12:00:00,1,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-77,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-05 12:00:00,2,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-77,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-05 12:00:00,6,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-77,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-05 12:00:00,4,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-82,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-07 18:00:00,4,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-82,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-07 18:00:00,4,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-82,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-07 18:00:00,1,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-86,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-12 12:00:00,7,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-86,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-12 12:00:00,8,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-86,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-12 12:00:00,4,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-91,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-05 12:00:00,3,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-91,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-05 12:00:00,1,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-91,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-05 12:00:00,1,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-93,dynamometer_area,2026-04-28 .. 2026-05-20,threshold_baseline,True,2026-05-05 12:00:00,3,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-93,dynamometer_area,2026-04-28 .. 2026-05-20,rolling_window,True,2026-05-05 12:00:00,7,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-93,dynamometer_area,2026-04-28 .. 2026-05-20,binary_segmentation,True,2026-05-05 12:00:00,4,Описание датасета: сдвиг масштаба dynamometer_area в мае 2026
+NK-7,SPM,2026-05-25 .. 2026-06-20,threshold_baseline,True,2026-05-25 00:00:00,9,Описание датасета: NK-7 с июня 2026 работает в другом режиме (SPM 4-5 -> 1)
+NK-7,SPM,2026-05-25 .. 2026-06-20,rolling_window,True,2026-06-09 12:00:00,13,Описание датасета: NK-7 с июня 2026 работает в другом режиме (SPM 4-5 -> 1)
+NK-7,SPM,2026-05-25 .. 2026-06-20,binary_segmentation,True,2026-05-26 12:00:00,13,Описание датасета: NK-7 с июня 2026 работает в другом режиме (SPM 4-5 -> 1)
+NK-75,tubing_pressure,2026-05-28 .. 2026-06-10,threshold_baseline,True,2026-06-01 18:00:00,7,Осмотр графиков: давление в НКТ NK-75 выросло примерно с 7 до 22 атм
+NK-75,tubing_pressure,2026-05-28 .. 2026-06-10,rolling_window,True,2026-06-01 18:00:00,10,Осмотр графиков: давление в НКТ NK-75 выросло примерно с 7 до 22 атм
+NK-75,tubing_pressure,2026-05-28 .. 2026-06-10,binary_segmentation,True,2026-06-01 18:00:00,14,Осмотр графиков: давление в НКТ NK-75 выросло примерно с 7 до 22 атм

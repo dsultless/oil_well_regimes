@@ -1,0 +1,44 @@
+{
+  "rows": 258387,
+  "columns": [
+    "well_id",
+    "well_type",
+    "timestamp",
+    "parameter",
+    "value",
+    "unit",
+    "n_obs",
+    "flag"
+  ],
+  "memory_before_mb": 24.61,
+  "memory_after_mb": 5.42,
+  "read_full_seconds": 0.327,
+  "read_full_peak_mb": 37.9,
+  "read_chunks_seconds": 0.504,
+  "read_chunks_peak_mb": 21.58,
+  "dtypes_before": {
+    "well_id": "str",
+    "well_type": "str",
+    "timestamp": "datetime64[us]",
+    "parameter": "str",
+    "value": "float64",
+    "unit": "str",
+    "n_obs": "int64",
+    "flag": "str"
+  },
+  "dtypes_after": {
+    "well_id": "category",
+    "well_type": "category",
+    "timestamp": "datetime64[us]",
+    "parameter": "category",
+    "value": "float64",
+    "unit": "category",
+    "n_obs": "int8",
+    "flag": "category"
+  },
+  "memory_saving_percent": 78.0,
+  "csv_size_mb": 18.93,
+  "parquet_size_mb": 1.81,
+  "csv_read_seconds": 0.108,
+  "parquet_read_seconds": 0.002
+}

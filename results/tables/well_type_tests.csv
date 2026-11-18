@@ -1,0 +1,6 @@
+metric,fountain_mean,pump_mean,mann_whitney_p
+stopped_percent,6.8,3.23,0.267
+stop_events,29.33,29.43,0.818
+mean_stop_hours,14.03,6.66,0.067
+changes_per_30_days,1.08,1.13,0.732
+main_cv_percent,29.27,23.21,0.833

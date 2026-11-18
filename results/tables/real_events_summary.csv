@@ -1,0 +1,4 @@
+method,events_found,events_total,avg_changes_per_series,event_recall
+binary_segmentation,9,9,4.777777777777778,1.0
+rolling_window,9,9,5.777777777777778,1.0
+threshold_baseline,9,9,4.555555555555555,1.0

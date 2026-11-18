@@ -1,0 +1,21 @@
+{
+  "best_params": {
+    "threshold_baseline": {
+      "k": 3.0
+    },
+    "rolling_window": {
+      "window": 28,
+      "threshold": 3.0
+    },
+    "binary_segmentation": {
+      "penalty": 64.0
+    }
+  },
+  "benchmark": {
+    "train_series": 108,
+    "test_series": 102,
+    "train_true_changes": 212,
+    "test_true_changes": 203,
+    "tolerance_hours": 48
+  }
+}
