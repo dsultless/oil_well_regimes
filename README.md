@@ -43,7 +43,7 @@ streamlit run app.py               # дашборд в браузере (пос�
 |---|---|
 | 1 | Скачать данные, прочитать CSV по частям, оптимизировать типы, сохранить Parquet, сравнить CSV и Parquet |
 | 2 | Аудит качества: полнота, флаги, нули, разрывы, известные проблемы |
-| 3 | Создать базу SQLite (3НФ), нарисовать ER-диаграмму, сравнить SQL и Pandas |
+| 3 | Создать базу SQLite (3НФ), сравнить SQL и Pandas |
 | 4 | Выполнить 12 SQL-запросов |
 | 5 | Разведочный анализ и графики |
 | 6 | Подобрать параметры методов на train, проверить на test и на реальных событиях |
@@ -65,23 +65,25 @@ oil_well_regimes/
 │   ├── quality.py       аудит качества данных
 │   ├── transform.py     очистка, нормировка, long -> wide, состояния, ряды
 │   ├── database.py      схема SQLite, загрузка, 12 запросов, SQL vs Pandas
-│   ├── er_diagram.py    ER-диаграмма (PNG)
 │   ├── eda.py           статистика, суточные профили, корреляции, сравнение типов
 │   ├── detectors.py     три метода поиска смены режима
 │   ├── evaluation.py    полусинтетическая проверка, подбор на train, test, реальные события
 │   ├── plots.py         графики и интерактивный HTML
 │   └── pipeline.py      шаги проекта по порядку
-├── database/wells.dbml  схема для dbdiagram.io (сама база wells.db создаётся программой)
+├── database/            wells.dbml (схема DBML), er_diagram.pdf/png (ER-диаграмма из dbdiagram.io);
+│                        сама база wells.db создаётся программой
 ├── data/raw/README.md   описание датасета от автора
 ├── results/
-│   ├── figures/         графики PNG, ER-диаграмма, interactive_regimes.html
+│   ├── figures/         графики PNG, скриншот дашборда, interactive_regimes.html
 │   └── tables/          все результаты в CSV и JSON
 └── reports/             отчёт (docx, pdf) и презентация (pptx, pdf)
 ```
 
 ## База данных
 
-![ER-диаграмма](results/figures/er_diagram.png)
+![ER-диаграмма](database/er_diagram.png)
+
+ER-диаграмма построена в [dbdiagram.io](https://dbdiagram.io) по схеме `database/wells.dbml` (PDF: `database/er_diagram.pdf`).
 
 Таблицы: `well_types`, `wells`, `parameters`, `measurements`, `flags`, `measurement_flags` (многие-ко-многим), а также таблицы результатов `detected_changes` и `experiments`.
 Запросы используют JOIN, GROUP BY/HAVING, подзапросы, CTE, оконные функции LAG, RANK, ROW_NUMBER и скользящее AVG.

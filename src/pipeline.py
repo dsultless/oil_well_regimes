@@ -5,7 +5,7 @@ import json
 
 import pandas as pd
 
-from src import config, data_loader, database, eda, er_diagram, evaluation, plots, quality, transform
+from src import config, data_loader, database, eda, evaluation, plots, quality, transform
 
 
 def load_clean():
@@ -55,7 +55,6 @@ def step_database():
     train = data_loader.load_dataset("train")
     test = data_loader.load_dataset("test")
     counts = database.build_database(train, test)
-    er_diagram.draw_er_diagram()
     for table, count in counts.items():
         print(f"{table}: {count} строк")
     comparison = database.pandas_vs_sql(pd.concat([train, test], ignore_index=True))
