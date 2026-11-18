@@ -1,0 +1,12 @@
+# Данные скачиваются программой (python main.py --all), в репозиторий не кладём
+data/raw/*.csv
+data/processed/
+database/*.db
+
+# Служебные файлы Python и редакторов
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
+.DS_Store
