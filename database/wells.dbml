@@ -1,0 +1,80 @@
+// ER-диаграмма базы wells.db (тема 27, анализ режимов работы скважин)
+// Вставить на https://dbdiagram.io (слева, вместо примера), затем Export -> PDF
+
+Project wells_regimes {
+  database_type: 'SQLite'
+  Note: 'NK Oil Well Sensor Monitoring v2. Нормализованная схема (3НФ)'
+}
+
+Table well_types {
+  type_id integer [pk]
+  type_name text [not null, unique, note: 'fountain или sucker_rod_pump']
+  description text
+}
+
+Table wells {
+  well_id text [pk, note: 'NK-7, NK-68, ...']
+  type_id integer [not null, ref: > well_types.type_id]
+}
+
+Table parameters {
+  parameter_id integer [pk]
+  name text [not null, unique]
+  unit text
+  type_id integer [not null, ref: > well_types.type_id]
+}
+
+Table measurements {
+  measurement_id integer [pk]
+  well_id text [not null, ref: > wells.well_id]
+  parameter_id integer [not null, ref: > parameters.parameter_id]
+  ts text [not null, note: 'начало часа']
+  value real [not null, note: 'среднее за час']
+  n_obs integer [not null]
+  split text [not null, note: 'train или test']
+
+  indexes {
+    (well_id, parameter_id, ts) [unique]
+  }
+}
+
+Table flags {
+  flag_id integer [pk]
+  flag_name text [not null, unique]
+  rule text
+}
+
+Table measurement_flags {
+  measurement_id integer [ref: > measurements.measurement_id]
+  flag_id integer [ref: > flags.flag_id]
+
+  indexes {
+    (measurement_id, flag_id) [pk]
+  }
+  Note: 'Связь многие-ко-многим: у одного часа может быть несколько флагов'
+}
+
+Table detected_changes {
+  change_id integer [pk]
+  well_id text [not null, ref: > wells.well_id]
+  parameter_id integer [not null, ref: > parameters.parameter_id]
+  method text [not null]
+  change_ts text [not null]
+  mean_before real
+  mean_after real
+  Note: 'Результаты: найденные смены режима'
+}
+
+Table experiments {
+  experiment_id integer [pk]
+  method text [not null]
+  split text [not null]
+  params text
+  precision real
+  recall real
+  f1 real
+  mean_delay_h real
+  time_ms real
+  memory_kb real
+  Note: 'Результаты: сравнение методов'
+}
