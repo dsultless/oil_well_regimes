@@ -10,15 +10,20 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from src import config, detectors, pipeline, transform
+from src import config, data_loader, detectors, pipeline, transform
 
 st.set_page_config(page_title="Режимы работы скважин NK", layout="wide")
 
 
 @st.cache_data
 def get_data():
-    """Загружает очищенные данные один раз и хранит в кэше."""
-    return pipeline.load_clean()
+    """Загружает очищенные данные один раз и хранит в кэше.
+    Если Parquet еще нет (например, на Streamlit Cloud), сначала скачивает и готовит данные."""
+    try:
+        return pipeline.load_clean()
+    except FileNotFoundError:
+        data_loader.prepare_data()
+        return pipeline.load_clean()
 
 
 @st.cache_data
